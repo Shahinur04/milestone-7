@@ -16,17 +16,17 @@ const displayTemperature = data => {
     setInnerText(data.weather[0].main)
     setInnerText(temperature,data.main.temp)
 }
-// const setInnerText=(id,text)=>{
-//     const temperature = document.getElementById('temperature')
-//     temperature.innerText =text;
+const setInnerText=(id,text)=>{
+    const temperature = document.getElementById('temperature')
+    temperature.innerText =text;
 
-// }
-// document.getElementById('btn-search').addEventListener('click', function () {
-//     const searchfield = document.getElementById('search-field')
-//     const city = searchfield.value;
-//     //city
-//     document.getElementById('city').innerText=city;
-//     loadTemperature(city);
+}
+document.getElementById('btn-search').addEventListener('click', function () {
+    const searchfield = document.getElementById('search-field')
+    const city = searchfield.value;
+    //city
+    document.getElementById('city').innerText=city;
+    loadTemperature(city);
 
-// })
-// loadTemperature('dhaka');
+})
+loadTemperature('dhaka');
