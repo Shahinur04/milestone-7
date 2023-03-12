@@ -30,3 +30,17 @@ document.getElementById('btn-search').addEventListener('click', function () {
 
 })
 loadTemperature('dhaka');
+fetch('temperature)
+.then(res => res.json())
+.then(data => displayTemperature(data));
+const temperature = document.getElementById('temperature')
+const city = document.getElementById('city')
+const searchfield = document.getElementById('search-field')
+const btn = document.getElementById('btn-search')
+btn.addEventListener('click', function () {
+    const searchfield = document.getElementById('search-field')
+    const city = searchfield.value;
+    //city
+    document.getElementById('city').innerText=city;
+    loadTemperature(city);
+}
